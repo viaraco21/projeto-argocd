@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sftp-pod-1
+spec:
+  containers:
+  - name: container-sftp-1
+    image: atmoz/sftp
+    volumeMounts:
+    - mountPath: /etc/sftp/
+      name: test-volume
+  volumes:
+  - name: test-volume
+    hostPath:
+      # localização do diretório no host
+      path: /home/raco/Downloads/primeiro-volume
+      # este campo é opcional
+      type: Directory

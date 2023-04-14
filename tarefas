@@ -1,0 +1,11 @@
+- Instalar o mini-kube - ok
+- Instalar o ArgoCD - ok VpgfdvwADs-7lc5i
+- Criar os Yaml para implantação do sftp no ArgoCD (Tem que ter: Deploy, configmap ou secrets para usuarios, PV e PVC)
+- Criar um API em nodejs com o http para receber uma chamada de inclusão de novos usuarios no sftp (configmap ou secrets)
+  - Docker nodejs:18
+  - Montar uma aplicação com express ouvindo a porta 3000 e chamando o /user com o body informando o usuario e senha
+  - Instalar o kubectl no docker
+  - Criar os services account para atualizar os usuarios no configmap
+  - Criar uma aplicação em bash para realizar o path no configmap e reiniciar o pod do sftp para pegar as novas configurações de usuário
+  
+Tempo previsto: 40 horas.

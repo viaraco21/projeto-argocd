@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: sftp-1
+spec:
+  containers:
+    - name: container-sftp-1
+      image: atmoz/sftp 
+      ports:
+        - containerPort: 22      

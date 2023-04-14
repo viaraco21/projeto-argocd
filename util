@@ -1,0 +1,32 @@
+comando para criar o container sftp
+docker run -d -p 22:22 -v "/home/raco/Downloads/primeiro-volume:/home/foo" -w "/home/foo" atmoz/sftp foo:pass:1001    
+
+comando para criar o pod no kubernetes
+kubectl run sftp --image=atmoz/sftp foo:pass:::upload                                                                                                        845  14:10:47  
+
+criar o configmap e jogar direto na pasta
+/etc/sftp/user
+
+SFTP_USERS environment variable 
+
+/etc/sftp/users.conf (syntax: user:pass[:e][:uid[:gid[:dir1[,dir2]...]]] ...
+
+/home/raco/Downloads/primeiro-volume
+
+volumes:
+  - name: sftp-configMap1
+    configMap:
+      defaultMode: 0775
+      name: sftp-configMap1
+      
+correção do configmap 
+  
+  sftp -P 2222 foo@localhost
+  comando p entrar no sftp
+  
+  
+  - configMap:
+          name: sftp-configmap1  
+          hostPath:
+            path: /home/raco/Downloads/primeiro-volume
+            type: Directory
