@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: PersistenVolume
-metadata:
-  name: pv-1
-spec:
-  
