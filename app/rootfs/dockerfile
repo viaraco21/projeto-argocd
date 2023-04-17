@@ -1,0 +1,12 @@
+FROM node:19
+
+RUN mkdir /app
+ADD . /
+RUN cp index.js /app
+RUN cp package.json /app
+
+WORKDIR /app
+
+RUN npm install --only=prod
+
+ENTRYPOINT ["node", "./app/index.js"]
