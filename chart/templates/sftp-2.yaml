@@ -20,7 +20,7 @@ spec:
             - mountPath: /etc/sftp
               name: sftp-configmap1
               readOnly: true
-            - mountPath: /home
+            - mountPath: /Totvs/Docker/projeto-argocd
               name: primeiro-pv
       volumes:
         - name: primeiro-pv

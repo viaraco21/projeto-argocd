@@ -11,7 +11,7 @@ spec:
   persistentVolumeReclaimPolicy: Delete
   storageClassName: hostpath
   local:
-    path: /home
+    path: /Totvs/Docker/projeto-argocd
   nodeAffinity:
     required:
       nodeSelectorTerms:
