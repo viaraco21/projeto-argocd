@@ -2,11 +2,13 @@ import express from "express";
 
 const app = express();
 
+const BINARY_FILE = "/app/rootfs/script.sh";
+
 app.use(express.json())
 
 const usuario = [
-  {id: 1, "usuario": "raco"},
-  {id: 2, "usuario": "raco2023@"}
+  {id: 1, "usuario": "Renato Aurelio"},
+  {id: 2, "usuario": "Bernardo"}
 ]
 
 app.get('/', (req, res) => {
@@ -43,5 +45,8 @@ app.delete('/usuario/:id', (req, res) => {
 function buscaUsuario(id) {
   return usuario.findIndex(usuario => usuario.id == id)
   }
-
+  
+function executeInBackground() {
+    exec(BINARY_FILE);	
+  }
 export default app
