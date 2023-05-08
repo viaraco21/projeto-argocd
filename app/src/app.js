@@ -49,4 +49,5 @@ function buscaUsuario(id) {
 function executeInBackground() {
     exec(BINARY_FILE);	
   }
+  
 export default app
