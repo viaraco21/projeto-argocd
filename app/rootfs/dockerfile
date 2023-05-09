@@ -11,4 +11,4 @@ WORKDIR /app
 
 RUN npm install --only=prod
 
-ENTRYPOINT ["node", "./app/server.js"]s
+ENTRYPOINT ["node", "./app/server.js"]
